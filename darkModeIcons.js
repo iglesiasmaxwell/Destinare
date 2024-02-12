@@ -44,7 +44,9 @@ function systemMode() {
 	}
 }
 
-// Check preferred mode of user on page reloaded
+/*
+ * Check preferred mode of user on page reloaded
+ */
 if (!('themeMode' in localStorage)) {
 	systemMode();
 } else if (localStorage.getItem('themeMode') == 'light') {
@@ -53,7 +55,9 @@ if (!('themeMode' in localStorage)) {
 	darkMode();
 }
 
-// Listening for user changes of preferred mode
+/**
+ * Listening for user changes of preferred mode
+ */
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
 	systemMode();
 });

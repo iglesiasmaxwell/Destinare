@@ -56,19 +56,23 @@ activeMode();
 
 toggleLightPref.addEventListener('click', function () {
 	document.documentElement.classList.remove('dark');
+	document.documentElement.setAttribute('data-theme', 'light');
 	localStorage.setItem('themeMode', 'light');
 	activeMode();
 });
 toggleDarkPref.addEventListener('click', function () {
 	document.documentElement.classList.add('dark');
+	document.documentElement.setAttribute('data-theme', 'dark');
 	localStorage.setItem('themeMode', 'dark');
 	activeMode();
 });
 toggleSystemPref.addEventListener('click', function () {
 	if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 		document.documentElement.classList.add('dark');
+		document.documentElement.setAttribute('data-theme', 'dark');
 	} else {
 		document.documentElement.classList.remove('dark');
+		document.documentElement.setAttribute('data-theme', 'light');
 	}
 	localStorage.removeItem('themeMode');
 	activeMode();

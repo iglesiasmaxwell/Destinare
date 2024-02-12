@@ -1,0 +1,38 @@
+[data-theme='light'] {
+	--p: #d4d4d8;
+	--s: #e7e5e4;
+}
+
+[data-theme='dark'] {
+	--p: #475569;
+	--s: #e7e5e4;
+}
+
+/* User Selection */
+::selection {
+	background: var(--p);
+}
+
+/* Scrollbar styles */
+
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--p);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--p);
+	border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--s);
+	border-radius: 14px;
+	border: 3px solid var(--p);
+}
