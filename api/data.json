@@ -1,0 +1,142 @@
+{
+	"Indonesia": {
+		"East Kalimantan": {
+			"Kabupaten Berau": {
+				"Stay": {
+					"": {
+						"name": "",
+						"city": "",
+						"tags": [],
+						"phone-contact": "",
+						"location": "",
+						"details": {
+							"room-types": [],
+							"hotel-class": null,
+							"hotel-style": []
+						}
+					}
+				},
+				"Eat": {
+					"": {
+						"name": "",
+						"city": "",
+						"tags": [],
+						"phone-contact": "",
+						"location": "",
+						"details": {
+							"cuisines": [],
+							"diets": [],
+							"meals": []
+						}
+					}
+				},
+				"Do": {
+					"Outdoors": {
+						"Labuan Cermin Lake": {
+							"name": "Labuan Cermin Lake",
+							"city": "Berau",
+							"tags": ["Bodies of Water", "Lake"],
+							"phone-contact": null,
+							"location": "Desa Labuan Kelambu, Kecamatan Biduk Biduk, Berau 77373 Indonesia",
+							"duration-estimate": "1-2 hours"
+						}
+					},
+					"Indoors": {}
+				}
+			},
+			"Kabupaten Kutai Barat": {},
+			"Kabupaten Kutai Kartanegara": {},
+			"Kabupaten Kutai Timur": {},
+			"Kabupaten Mahakam Ulu": {},
+			"Kabupaten Paser": {},
+			"Kabupaten Penajam Paser Utara": {},
+			"Kota Balikpapan": {
+				"Stay": {
+					"": {
+						"name": "",
+						"city": "",
+						"tags": [],
+						"phone-contact": "",
+						"location": "",
+						"details": {
+							"room-types": [],
+							"hotel-class": null,
+							"hotel-style": []
+						}
+					}
+				},
+				"Eat": {
+					"Restaurants": {
+						"Ocean's": {
+							"name": "Ocean's",
+							"city": "Balikpapan",
+							"tags": ["Seafood", "Asian", "Indonesian"],
+							"phone-contact": "+62 542 739439",
+							"location": "Jl. Jenderal Sudirman, Ruko Bandar No. 18 Blok M, Balikpapan 76112 Indonesia",
+							"details": {
+								"cuisines": ["Seafood", "Asian", "Indonesian"],
+								"diets": ["Vegetarian Friendly", "Vegan Options", "Halal", "Gluten Free Options"],
+								"meals": ["Lunch", "Dinner", "Brunch", "After-hours"]
+							}
+						}
+					},
+					"Cafe": {}
+				},
+				"Do": {
+					"": {
+						"name": "",
+						"city": "",
+						"tags": [],
+						"phone-contact": "",
+						"location": "",
+						"duration-estimate": ""
+					}
+				}
+			},
+			"Kota Bontang": {},
+			"Kota Samarinda": {
+				"Stay": {
+					"Hotels": {
+						"Ibis Samarinda Hotel": {
+							"name": "Ibis Samarinda Hotel",
+							"city": "Samarinda",
+							"tags": ["Recommended", "3-Star"],
+							"phone-contact": null,
+							"location": "Jalan Mulawarman No 171 Pelabuhan, Samarinda 75112 Indonesia",
+							"details": {
+								"room-types": ["City view", "Non-smoking rooms", "Smoking room available", "Pool view", "Suites"],
+								"hotel-class": 3,
+								"hotel-style": ["City View", "Charming"]
+							}
+						}
+					},
+					"Resorts": {}
+				},
+				"Eat": {
+					"": {
+						"name": "",
+						"city": "",
+						"tags": [],
+						"phone-contact": "",
+						"location": "",
+						"details": {
+							"cuisines": [],
+							"diets": [],
+							"meals": []
+						}
+					}
+				},
+				"Do": {
+					"": {
+						"name": "",
+						"city": "",
+						"tags": [],
+						"phone-contact": "",
+						"location": "",
+						"duration-estimate": ""
+					}
+				}
+			}
+		}
+	}
+}
