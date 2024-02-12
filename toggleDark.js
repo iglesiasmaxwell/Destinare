@@ -99,3 +99,7 @@ document.addEventListener('click', (event) => {
 		prefModeDropdown.classList.add('invisible');
 	}
 });
+document.addEventListener('scroll', () => {
+	prefModeDropdown.classList.add('opacity-0');
+	prefModeDropdown.classList.add('invisible');
+});
