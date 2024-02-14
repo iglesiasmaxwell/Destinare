@@ -1,0 +1,45 @@
+{
+	"East Kalimantan": {
+		"Stay": {
+			"Ibis Samarinda Hotel": {
+				"image-url": "",
+				"name": "Ibis Samarinda Hotel",
+				"city": "Samarinda",
+				"tags": ["Recommended", "3-Star"],
+				"phone-contact": null,
+				"location": "Jalan Mulawarman No 171 Pelabuhan, Samarinda 75112 Indonesia",
+				"details": {
+					"room-types": ["City view", "Non-smoking rooms", "Smoking room available", "Pool view", "Suites"],
+					"hotel-class": 3,
+					"hotel-style": ["City View", "Charming"]
+				}
+			}
+		},
+		"Eat": {
+			"Ocean's": {
+				"image-url": "",
+				"name": "Ocean's",
+				"city": "Balikpapan",
+				"tags": ["Seafood", "Asian", "Indonesian"],
+				"phone-contact": "+62 542 739439",
+				"location": "Jl. Jenderal Sudirman, Ruko Bandar No. 18 Blok M, Balikpapan 76112 Indonesia",
+				"details": {
+					"cuisines": ["Seafood", "Asian", "Indonesian"],
+					"diets": ["Vegetarian Friendly", "Vegan Options", "Halal", "Gluten Free Options"],
+					"meals": ["Lunch", "Dinner", "Brunch", "After-hours"]
+				}
+			}
+		},
+		"Do": {
+			"Labuan Cermin Lake": {
+				"image-url": "",
+				"name": "Labuan Cermin Lake",
+				"city": "Berau",
+				"tags": ["Bodies of Water", "Lake"],
+				"phone-contact": null,
+				"location": "Desa Labuan Kelambu, Kecamatan Biduk Biduk, Berau 77373 Indonesia",
+				"duration-estimate": "1-2 hours"
+			}
+		}
+	}
+}

@@ -1,7 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
-	new scrollGallery('scrollGallery-0');
-	new scrollGallery('scrollGallery-1');
-	new scrollGallery('scrollGallery-2');
+	new scrollGallery('scrollGallery-all');
+	new scrollGallery('scrollGallery-stay');
+	new scrollGallery('scrollGallery-eat');
+	new scrollGallery('scrollGallery-do');
 });
 
 class scrollGallery {
@@ -28,7 +29,10 @@ class scrollGallery {
 		this.scrollGallery.scrollLeft = 0;
 
 		/* Check if scroll gallery is not scrollable (fit in viewport) */
-		if (this.scrollGallery.scrollWidth <= 912) {
+		if (this.scrollGallery.scrollWidth <= 1152 && this.scrollGallery.id == 'scrollGallery-all') {
+			this.slideLeft.classList.add('hidden');
+			this.slideRight.classList.add('hidden');
+		} else if (this.scrollGallery.scrollWidth <= 912) {
 			this.slideLeft.classList.add('hidden');
 			this.slideRight.classList.add('hidden');
 		} else {
@@ -56,6 +60,7 @@ class scrollGallery {
 		/* Right Button */
 		this.slideRight.addEventListener('click', () => {
 			this.slide(slideAmount);
+			console.log(this.scrollGallery.scrollWidth);
 		});
 
 		/**

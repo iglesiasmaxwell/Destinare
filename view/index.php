@@ -78,20 +78,85 @@ include_once '../api/fetchData.php';
 		<hr class="border-gray-800/5 dark:border-zinc-50/5 z-20" />
 	</nav>
 	<header id="Discover" class="mt-24 mx-8">
-		<h1 class="text-3xl font-JetbrainsMono font-semibold">
-			<span class="font-Outfit text-4xl text-gray-600 dark:text-zinc-300 uppercase">Discover</span>
-			<span><?= $provinceSelect; ?></span>
+		<h1 class="text-4xl font-JetbrainsMono font-semibold">
+			<span class="font-Outfit text-gray-600 dark:text-zinc-300 uppercase">Discover</span>
+			<span><?= $eastKalimantanKey[0]; ?></span>
 		</h1>
+
+		<div class="grid w-full py-6 gap-6">
+			<div id="scrollGallery-all-Con" class="group/more w-full h-22 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
+				<p class="font-semibold font-Poppins text-xl mb-2">Explore</p>
+				<p class="text-base font-Playfair font-medium">The journeys and voyages for your true destination, begin here.</p>
+				<div class="my-3">
+					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
+				</div>
+				<div class="flex float-right absolute top-4 right-4 gap-4 items-center">
+					<button class="grid items-center slide-left w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
+						<i class="ti ti-chevron-compact-left text-gray-800 dark:text-zinc-50 text-lg"></i>
+					</button>
+					<button class="grid items-center slide-right w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
+						<i class="ti ti-chevron-compact-right text-gray-800 dark:text-zinc-50 text-lg"></i>
+					</button>
+				</div>
+			</div>
+			<div id="scrollGallery-all" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
+				<div class="flex gap-6">
+					<?php
+					foreach ($eastKalimantanAll as $key => $array) {
+					?>
+						<div class="gallery snap-center flex-shrink-0">
+							<a href="#">
+								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+								<?php else : ?>
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= $array['image-url'] ?> />
+								<?php endif; ?>
+							</a>
+							<div class="mt-1 mx-1 font-Outfit font-medium">
+								<p class="text-lg empty:hidden"><?= $key ?></p>
+								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
+									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
+								<?php else : ?>
+									<p class="text-sm text-gray-600 dark:text-zinc-300"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
+								<?php endif; ?>
+							</div>
+						</div>
+						<div class="gallery snap-center flex-shrink-0">
+							<a href="#">
+								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+								<?php else : ?>
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= $array['image-url'] ?> />
+								<?php endif; ?>
+							</a>
+							<div class="mt-1 mx-1 font-Outfit font-medium">
+								<p class="text-lg empty:hidden"><?= $key ?></p>
+								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
+									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
+								<?php else : ?>
+									<p class="text-sm text-gray-600 dark:text-zinc-300"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
+								<?php endif; ?>
+							</div>
+						</div>
+					<?php
+					}
+					?>
+				</div>
+			</div>
+		</div>
 	</header>
+
+
 	<section id="Essential" class="mt-12 mx-8">
-		<h1 class="text-2xl font-JetbrainsMono font-medium">
-			<span class="font-Outfit text-3xl text-gray-600 dark:text-zinc-300 uppercase">Essential</span>
-			<span><?= $provinceSelect; ?></span>
+		<h1 class="text-3xl font-JetbrainsMono font-medium">
+			<span class="font-Outfit text-gray-600 dark:text-zinc-300 uppercase">Essential</span>
+			<span><?= $eastKalimantanKey[0]; ?></span>
 		</h1>
+
 		<div class="flex w-full py-6 gap-6">
-			<div id="scrollGallery-0-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-medium font-Poppins text-xl mb-2">Stay</p>
-				<p class="text-base font-Playfair">A mix of the charming, modern, and tried and true.</p>
+			<div id="scrollGallery-stay-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
+				<p class="font-semibold font-Poppins text-xl mb-2">Stay</p>
+				<p class="text-base font-Playfair font-medium">A mix of the charming, modern, and tried and true.</p>
 				<div class="my-3">
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
 				</div>
@@ -104,70 +169,41 @@ include_once '../api/fetchData.php';
 					</button>
 				</div>
 			</div>
-			<div id="scrollGallery-0" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
+			<div id="scrollGallery-stay" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
 				<div class="flex gap-6">
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
+					<?php
+					$count = 0;
+					$limit = 8;
+					foreach ($eastKalimantanStay as $key => $array) if ($count++ < $limit) {
+					?>
+						<div class="gallery snap-center flex-shrink-0">
+							<a href="#">
+								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+								<?php else : ?>
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= $array['image-url'] ?> />
+								<?php endif; ?>
+							</a>
+							<div class="mt-1 mx-1 font-Outfit font-medium">
+								<p class="text-lg empty:hidden"><?= $key ?></p>
+								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
+									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
+								<?php else : ?>
+									<p class="text-sm text-gray-600 dark:text-zinc-300"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
+								<?php endif; ?>
+							</div>
 						</div>
-					</div>
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
-						</div>
-					</div>
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
-						</div>
-					</div>
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
-						</div>
-					</div>
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
-						</div>
-					</div>
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
-						</div>
-					</div>
+					<?php
+					}
+					?>
 				</div>
 			</div>
 		</div>
 
 		<div class="flex w-full py-6 gap-6">
-			<div id="scrollGallery-1-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-medium font-Poppins text-xl mb-2">Eat</p>
-				<p class="text-base font-Playfair">Can't-miss spots to dine, drink, and feast.</p>
+			<div id="scrollGallery-eat-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
+				<p class="font-semibold font-Poppins text-xl mb-2">Eat</p>
+				<p class="text-base font-Playfair font-medium">Can't-miss spots to dine, drink, and feast.</p>
 				<div class="my-3">
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
 				</div>
@@ -180,43 +216,41 @@ include_once '../api/fetchData.php';
 					</button>
 				</div>
 			</div>
-			<div id="scrollGallery-1" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
+			<div id="scrollGallery-eat" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
 				<div class="flex gap-6">
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
+					<?php
+					$count = 0;
+					$limit = 8;
+					foreach ($eastKalimantanEat as $key => $array) if ($count++ < $limit) {
+					?>
+						<div class="gallery snap-center flex-shrink-0">
+							<a href="#">
+								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+								<?php else : ?>
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= $array['image-url'] ?> />
+								<?php endif; ?>
+							</a>
+							<div class="mt-1 mx-1 font-Outfit font-medium">
+								<p class="text-lg empty:hidden"><?= $key ?></p>
+								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
+									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
+								<?php else : ?>
+									<p class="text-sm text-gray-600 dark:text-zinc-300"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
+								<?php endif; ?>
+							</div>
 						</div>
-					</div>
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
-						</div>
-					</div>
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
-						</div>
-					</div>
+					<?php
+					}
+					?>
 				</div>
 			</div>
 		</div>
 
 		<div class="flex w-full py-6 gap-6">
-			<div id="scrollGallery-2-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-medium font-Poppins text-xl mb-2">Do</p>
-				<p class="text-base font-Playfair">Places to see, ways to wander, and signature experiences.</p>
+			<div id="scrollGallery-do-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
+				<p class="font-semibold font-Poppins text-xl mb-2">Do</p>
+				<p class="text-base font-Playfair font-medium">Places to see, ways to wander, and signature experiences.</p>
 				<div class="my-3">
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
 				</div>
@@ -229,44 +263,33 @@ include_once '../api/fetchData.php';
 					</button>
 				</div>
 			</div>
-			<div id="scrollGallery-2" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
+			<div id="scrollGallery-do" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
 				<div class="flex gap-6">
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
+					<?php
+					$count = 0;
+					$limit = 8;
+					foreach ($eastKalimantanDo as $key => $array) if ($count++ < $limit) {
+					?>
+						<div class="gallery snap-center flex-shrink-0">
+							<a href="#">
+								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+								<?php else : ?>
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= $array['image-url'] ?> />
+								<?php endif; ?>
+							</a>
+							<div class="mt-1 mx-1 font-Outfit font-medium">
+								<p class="text-lg empty:hidden"><?= $key ?></p>
+								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
+									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
+								<?php else : ?>
+									<p class="text-sm text-gray-600 dark:text-zinc-300"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
+								<?php endif; ?>
+							</div>
 						</div>
-					</div>
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
-						</div>
-					</div>
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
-						</div>
-					</div>
-					<div class="gallery snap-end flex-shrink-0">
-						<a href="#">
-							<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src="../img/stock-image (1).jpg" />
-						</a>
-						<div class="mt-1 mx-1 font-Outfit font-medium">
-							<p class="text-lg">Test Name</p>
-							<p class="text-sm text-gray-600 dark:text-zinc-300">Test Location</p>
-						</div>
-					</div>
+					<?php
+					}
+					?>
 				</div>
 			</div>
 		</div>
