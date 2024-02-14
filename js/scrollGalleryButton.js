@@ -5,6 +5,31 @@ window.addEventListener('DOMContentLoaded', () => {
 	new scrollGallery('scrollGallery-do');
 });
 
+function leftActive() {
+	this.slideLeft.classList.remove('bg-zinc-200/20');
+	this.slideLeft.classList.remove('dark:bg-gray-700/10');
+	this.slideLeftIcon.classList.remove('text-gray-400/85');
+	this.slideLeftIcon.classList.remove('dark:text-zinc-500');
+}
+function leftUnactive() {
+	this.slideLeft.classList.add('bg-zinc-200/20');
+	this.slideLeft.classList.add('dark:bg-gray-700/10');
+	this.slideLeftIcon.classList.add('text-gray-400/85');
+	this.slideLeftIcon.classList.add('dark:text-zinc-500');
+}
+function rightUnactive() {
+	this.slideLeft.classList.remove('bg-zinc-200/20');
+	this.slideLeft.classList.remove('dark:bg-gray-700/10');
+	this.slideLeftIcon.classList.remove('text-gray-400/85');
+	this.slideLeftIcon.classList.remove('dark:text-zinc-500');
+}
+function rightActive() {
+	this.slideRight.classList.remove('bg-zinc-200/20');
+	this.slideRight.classList.remove('dark:bg-gray-700/10');
+	this.slideRightIcon.classList.remove('text-gray-400/85');
+	this.slideRightIcon.classList.remove('dark:text-zinc-500');
+}
+
 class scrollGallery {
 	constructor(scrollGalleryID) {
 		/* Container */
@@ -20,6 +45,32 @@ class scrollGallery {
 		this.slideRightIcon = this.slideRight.getElementsByClassName('ti-chevron-compact-right')[0];
 
 		let slideAmount = 300;
+		let slideAmountRemain = 200;
+
+		this.leftUnactive = () => {
+			this.slideLeft.classList.add('bg-zinc-200/20');
+			this.slideLeft.classList.add('dark:bg-gray-700/10');
+			this.slideLeftIcon.classList.add('text-gray-400/85');
+			this.slideLeftIcon.classList.add('dark:text-zinc-500');
+		};
+		this.leftActive = () => {
+			this.slideLeft.classList.remove('bg-zinc-200/20');
+			this.slideLeft.classList.remove('dark:bg-gray-700/10');
+			this.slideLeftIcon.classList.remove('text-gray-400/85');
+			this.slideLeftIcon.classList.remove('dark:text-zinc-500');
+		};
+		this.rightUnactive = () => {
+			this.slideRight.classList.add('bg-zinc-200/20');
+			this.slideRight.classList.add('dark:bg-gray-700/10');
+			this.slideRightIcon.classList.add('text-gray-400/85');
+			this.slideRightIcon.classList.add('dark:text-zinc-500');
+		};
+		this.rightActive = () => {
+			this.slideRight.classList.remove('bg-zinc-200/20');
+			this.slideRight.classList.remove('dark:bg-gray-700/10');
+			this.slideRightIcon.classList.remove('text-gray-400/85');
+			this.slideRightIcon.classList.remove('dark:text-zinc-500');
+		};
 
 		this.slide = (slideAmount) => {
 			this.scrollGallery.scrollLeft += slideAmount;
@@ -36,20 +87,14 @@ class scrollGallery {
 			this.slideLeft.classList.add('hidden');
 			this.slideRight.classList.add('hidden');
 		} else {
-			this.slideLeft.classList.add('bg-zinc-200/20');
-			this.slideLeft.classList.add('dark:bg-gray-700/10');
-			this.slideLeftIcon.classList.add('text-gray-400/85');
-			this.slideLeftIcon.classList.add('dark:text-zinc-500');
+			this.leftUnactive();
 			if (
 				this.slideRight.classList.contains('bg-zinc-200/20') ||
 				this.slideRight.classList.contains('dark:bg-gray-700/10') ||
 				this.slideRightIcon.classList.remove('text-gray-400/85') ||
 				this.slideRightIcon.classList.remove('dark:text-zinc-500')
 			) {
-				this.slideRight.classList.remove('bg-zinc-200/20');
-				this.slideRight.classList.remove('dark:bg-gray-700/10');
-				this.slideRightIcon.classList.remove('text-gray-400/85');
-				this.slideRightIcon.classList.remove('dark:text-zinc-500');
+				this.rightActive();
 			}
 		}
 
@@ -60,7 +105,6 @@ class scrollGallery {
 		/* Right Button */
 		this.slideRight.addEventListener('click', () => {
 			this.slide(slideAmount);
-			console.log(this.scrollGallery.scrollWidth);
 		});
 
 		/**
@@ -71,34 +115,34 @@ class scrollGallery {
 			let nowScrollLeft = this.scrollGallery.scrollLeft;
 
 			if (lastScrollLeft > nowScrollLeft) {
-				this.slideRight.classList.remove('bg-zinc-200/20');
-				this.slideRight.classList.remove('dark:bg-gray-700/10');
-				this.slideRightIcon.classList.remove('text-gray-400/85');
-				this.slideRightIcon.classList.remove('dark:text-zinc-500');
-				if (this.scrollGallery.scrollLeft <= slideAmount) {
-					this.slideLeft.classList.add('bg-zinc-200/20');
-					this.slideLeft.classList.add('dark:bg-gray-700/10');
-					this.slideLeftIcon.classList.add('text-gray-400/85');
-					this.slideLeftIcon.classList.add('dark:text-zinc-500');
+				this.rightActive();
+				if (this.scrollGallery.id == 'scrollGallery-all') {
+					if (this.scrollGallery.scrollLeft <= slideAmount - slideAmountRemain) {
+						this.leftUnactive();
+					}
+				} else {
+					if (this.scrollGallery.scrollLeft <= slideAmount) {
+						this.leftUnactive();
+					}
 				}
 			} else if (lastScrollLeft < nowScrollLeft) {
-				this.slideRight.classList.remove('bg-zinc-200/20');
-				this.slideRight.classList.remove('dark:bg-gray-700/10');
-				this.slideRightIcon.classList.remove('text-gray-400/85');
-				this.slideRightIcon.classList.remove('dark:text-zinc-500');
+				this.rightActive();
 				if (this.scrollGallery.scrollLeft > 0) {
-					this.slideLeft.classList.remove('bg-zinc-200/20');
-					this.slideLeft.classList.remove('dark:bg-gray-700/10');
-					this.slideLeftIcon.classList.remove('text-gray-400/85');
-					this.slideLeftIcon.classList.remove('dark:text-zinc-500');
-					if (
-						this.scrollGallery.scrollLeft + this.scrollGallery.offsetWidth >
-						this.scrollGallery.scrollWidth - slideAmount
-					) {
-						this.slideRight.classList.add('bg-zinc-200/20');
-						this.slideRight.classList.add('dark:bg-gray-700/10');
-						this.slideRightIcon.classList.add('text-gray-400/85');
-						this.slideRightIcon.classList.add('dark:text-zinc-500');
+					this.leftActive();
+					if (this.scrollGallery.id == 'scrollGallery-all') {
+						if (
+							this.scrollGallery.scrollLeft + this.scrollGallery.offsetWidth >
+							this.scrollGallery.scrollWidth - slideAmount + slideAmountRemain
+						) {
+							this.rightUnactive();
+						}
+					} else {
+						if (
+							this.scrollGallery.scrollLeft + this.scrollGallery.offsetWidth >
+							this.scrollGallery.scrollWidth - slideAmount
+						) {
+							this.rightUnactive();
+						}
 					}
 				}
 			}

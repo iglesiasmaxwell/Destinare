@@ -34,12 +34,12 @@ include_once '../api/fetchData.php';
 		<div id="navBarShade" class="h-16 w-full px-8 flex z-50 transition-all duration-1000">
 			<div class="flex justify-between w-full text-gray-800/80 dark:text-zinc-50/80 items-center">
 				<div>
-					<a href="index.html" class="font-medium text-gray-800 dark:text-zinc-50 text-2xl tracking-wide font-Pacifico select-none">Destinare</a>
+					<a href="../view/index.php" class="font-medium text-gray-800 dark:text-zinc-50 text-2xl tracking-wide font-Pacifico select-none">Destinare</a>
 				</div>
 				<div class="flex justify-center space-x-12 font-Outfit select-none">
 					<a href="#Discover" class="font-medium text-medium hover:text-black dark:hover:text-white transition ease-in duration-150">Discover</a>
 					<a href="#Essential" class="font-medium text-medium hover:text-black dark:hover:text-white transition ease-in duration-150">Essential</a>
-					<a href="#" class="font-medium text-medium hover:text-black dark:hover:text-white transition ease-in duration-150">More</a>
+					<a href="#More" class="font-medium text-medium hover:text-black dark:hover:text-white transition ease-in duration-150">More</a>
 				</div>
 				<div class="flex justify-end space-x-4 items-center">
 					<div>
@@ -84,12 +84,9 @@ include_once '../api/fetchData.php';
 		</h1>
 
 		<div class="grid w-full py-6 gap-6">
-			<div id="scrollGallery-all-Con" class="group/more w-full h-22 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
+			<div id="scrollGallery-all-Con" class="group/more w-full h-fit bg-zinc-100/75 dark:bg-gray-800/50 px-3 py-4 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
 				<p class="font-semibold font-Poppins text-xl mb-2">Explore</p>
-				<p class="text-base font-Playfair font-medium">The journeys and voyages for your true destination, begin here.</p>
-				<div class="my-3">
-					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
-				</div>
+				<p class="text-base font-Playfair font-medium w-56">The journeys and voyages for your true destination, begin here.</p>
 				<div class="flex float-right absolute top-4 right-4 gap-4 items-center">
 					<button class="grid items-center slide-left w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
 						<i class="ti ti-chevron-compact-left text-gray-800 dark:text-zinc-50 text-lg"></i>
@@ -107,26 +104,9 @@ include_once '../api/fetchData.php';
 						<div class="gallery snap-center flex-shrink-0">
 							<a href="#">
 								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
 								<?php else : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= $array['image-url'] ?> />
-								<?php endif; ?>
-							</a>
-							<div class="mt-1 mx-1 font-Outfit font-medium">
-								<p class="text-lg empty:hidden"><?= $key ?></p>
-								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
-									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
-								<?php else : ?>
-									<p class="text-sm text-gray-600 dark:text-zinc-300"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
-								<?php endif; ?>
-							</div>
-						</div>
-						<div class="gallery snap-center flex-shrink-0">
-							<a href="#">
-								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
-								<?php else : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= $array['image-url'] ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
 							<div class="mt-1 mx-1 font-Outfit font-medium">
@@ -179,9 +159,9 @@ include_once '../api/fetchData.php';
 						<div class="gallery snap-center flex-shrink-0">
 							<a href="#">
 								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
 								<?php else : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= $array['image-url'] ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
 							<div class="mt-1 mx-1 font-Outfit font-medium">
@@ -226,9 +206,9 @@ include_once '../api/fetchData.php';
 						<div class="gallery snap-center flex-shrink-0">
 							<a href="#">
 								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
 								<?php else : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= $array['image-url'] ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
 							<div class="mt-1 mx-1 font-Outfit font-medium">
@@ -273,9 +253,9 @@ include_once '../api/fetchData.php';
 						<div class="gallery snap-center flex-shrink-0">
 							<a href="#">
 								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
 								<?php else : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800" src=<?= $array['image-url'] ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
 							<div class="mt-1 mx-1 font-Outfit font-medium">
@@ -296,6 +276,23 @@ include_once '../api/fetchData.php';
 
 	</section>
 </body>
+<footer id="More" class="bg-zinc-100/75 dark:bg-gray-800/50 w-full py-6 px-10 relative">
+	<div class="flex justify-between items-center">
+		<div class="bg-zinc-50/50 dark:bg-gray-900/50 rounded-lg px-5 py-3">
+			<p class="font-medium text-gray-800 dark:text-zinc-50 text-lg tracking-wide font-Pacifico select-none">Destinare</p>
+			<p class="text-xs text-gray-800/80 dark:text-zinc-50/80">© 2024 Destinare All rights reserved.</p>
+		</div>
+		<p class="text-xs text-gray-800/35 dark:text-zinc-50/35">This website is only made for education purpose, not for any monetary gain.</p>
+		<div class="flex gap-6 justify-center items-center bg-zinc-50/50 dark:bg-gray-900/50 rounded-lg px-5 py-3">
+			<a href="#" class="group/icon text-gray-800/80 dark:text-zinc-50/80">
+				<i class="fa-brands fa-x-twitter fa-fw fa-lg group-hover/icon:text-black dark:group-hover/icon:text-white transition ease-in duration-150"></i>
+			</a>
+			<a href="#" class="group/icon text-gray-800/80 dark:text-zinc-50/80">
+				<i class="fa-brands fa-instagram fa-fw fa-lg group-hover/icon:text-black dark:group-hover/icon:text-white transition ease-in duration-150"></i>
+			</a>
+		</div>
+	</div>
+</footer>
 <!-- JAVASCRIPT AFTER -->
 <script src="../js/dark-mode/darkModeIcons.js"></script>
 <script src="../js/dark-mode/toggleDark.js"></script>
