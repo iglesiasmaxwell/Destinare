@@ -5,48 +5,50 @@
  * let toggleSystemPref = document.getElementById('systemModePref');
  */
 
-// LIGHT
+/* LIGHT */
 let themeLightIcon = document.getElementById('themeLightIcon');
 let themeLightText = document.getElementById('themeLightText');
-// DARK
+
+/* DARK */
 let themeDarkIcon = document.getElementById('themeDarkIcon');
 let themeDarkText = document.getElementById('themeDarkText');
-// SYSTEM
+
+/* SYSTEM */
 let themeSystemIcon = document.getElementById('themeSystemIcon');
 let themeSystemText = document.getElementById('themeSystemText');
 
 function activeMode() {
 	if (localStorage.getItem('themeMode') == 'light') {
-		themeLightIcon.classList.add('!text-gray-500');
+		themeLightIcon.classList.add('!text-gray-700');
 		themeLightIcon.classList.add('dark:!text-zinc-400');
 		themeLightText.classList.add('!text-gray-800/80');
 		themeLightText.classList.add('dark:!text-zinc-50/80');
 	} else {
-		themeLightIcon.classList.remove('!text-gray-500');
+		themeLightIcon.classList.remove('!text-gray-700');
 		themeLightIcon.classList.remove('dark:!text-zinc-400');
 		themeLightText.classList.remove('!text-gray-800/80');
 		themeLightText.classList.remove('dark:!text-zinc-50/80');
 	}
 
 	if (localStorage.getItem('themeMode') == 'dark') {
-		themeDarkIcon.classList.add('!text-gray-500');
+		themeDarkIcon.classList.add('!text-gray-700');
 		themeDarkIcon.classList.add('dark:!text-zinc-400');
 		themeDarkText.classList.add('!text-gray-800/80');
 		themeDarkText.classList.add('dark:!text-zinc-50/80');
 	} else {
-		themeDarkIcon.classList.remove('!text-gray-500');
+		themeDarkIcon.classList.remove('!text-gray-700');
 		themeDarkIcon.classList.remove('dark:!text-zinc-400');
 		themeDarkText.classList.remove('!text-gray-800/80');
 		themeDarkText.classList.remove('dark:!text-zinc-50/80');
 	}
 
 	if (!('themeMode' in localStorage)) {
-		themeSystemIcon.classList.add('!text-gray-500');
+		themeSystemIcon.classList.add('!text-gray-700');
 		themeSystemIcon.classList.add('dark:!text-zinc-400');
 		themeSystemText.classList.add('!text-gray-800/80');
 		themeSystemText.classList.add('dark:!text-zinc-50/80');
 	} else {
-		themeSystemIcon.classList.remove('!text-gray-500');
+		themeSystemIcon.classList.remove('!text-gray-700');
 		themeSystemIcon.classList.remove('dark:!text-zinc-400');
 		themeSystemText.classList.remove('!text-gray-800/80');
 		themeSystemText.classList.remove('dark:!text-zinc-50/80');
@@ -54,19 +56,19 @@ function activeMode() {
 }
 activeMode();
 
-toggleLightPref.addEventListener('click', function () {
+toggleLightPref.addEventListener('click', () => {
 	document.documentElement.classList.remove('dark');
 	document.documentElement.setAttribute('data-theme', 'light');
 	localStorage.setItem('themeMode', 'light');
 	activeMode();
 });
-toggleDarkPref.addEventListener('click', function () {
+toggleDarkPref.addEventListener('click', () => {
 	document.documentElement.classList.add('dark');
 	document.documentElement.setAttribute('data-theme', 'dark');
 	localStorage.setItem('themeMode', 'dark');
 	activeMode();
 });
-toggleSystemPref.addEventListener('click', function () {
+toggleSystemPref.addEventListener('click', () => {
 	if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 		document.documentElement.classList.add('dark');
 		document.documentElement.setAttribute('data-theme', 'dark');

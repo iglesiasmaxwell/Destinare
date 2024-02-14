@@ -1,38 +1,13 @@
 {
 	"Indonesia": {
 		"East Kalimantan": {
-			"Kabupaten Berau": {
-				"Stay": {
-					"": {
-						"name": "",
-						"city": "",
-						"tags": [],
-						"phone-contact": "",
-						"location": "",
-						"details": {
-							"room-types": [],
-							"hotel-class": null,
-							"hotel-style": []
-						}
-					}
-				},
-				"Eat": {
-					"": {
-						"name": "",
-						"city": "",
-						"tags": [],
-						"phone-contact": "",
-						"location": "",
-						"details": {
-							"cuisines": [],
-							"diets": [],
-							"meals": []
-						}
-					}
-				},
+			"Berau": {
+				"Stay": {},
+				"Eat": {},
 				"Do": {
 					"Outdoors": {
 						"Labuan Cermin Lake": {
+							"image-url": "",
 							"name": "Labuan Cermin Lake",
 							"city": "Berau",
 							"tags": ["Bodies of Water", "Lake"],
@@ -44,30 +19,18 @@
 					"Indoors": {}
 				}
 			},
-			"Kabupaten Kutai Barat": {},
-			"Kabupaten Kutai Kartanegara": {},
-			"Kabupaten Kutai Timur": {},
-			"Kabupaten Mahakam Ulu": {},
-			"Kabupaten Paser": {},
-			"Kabupaten Penajam Paser Utara": {},
-			"Kota Balikpapan": {
-				"Stay": {
-					"": {
-						"name": "",
-						"city": "",
-						"tags": [],
-						"phone-contact": "",
-						"location": "",
-						"details": {
-							"room-types": [],
-							"hotel-class": null,
-							"hotel-style": []
-						}
-					}
-				},
+			"Kutai Barat": {},
+			"Kutai Kartanegara": {},
+			"Kutai Timur": {},
+			"Mahakam Ulu": {},
+			"Paser": {},
+			"Penajam Paser Utara": {},
+			"Balikpapan": {
+				"Stay": {},
 				"Eat": {
 					"Restaurants": {
 						"Ocean's": {
+							"image-url": "",
 							"name": "Ocean's",
 							"city": "Balikpapan",
 							"tags": ["Seafood", "Asian", "Indonesian"],
@@ -82,22 +45,14 @@
 					},
 					"Cafe": {}
 				},
-				"Do": {
-					"": {
-						"name": "",
-						"city": "",
-						"tags": [],
-						"phone-contact": "",
-						"location": "",
-						"duration-estimate": ""
-					}
-				}
+				"Do": {}
 			},
-			"Kota Bontang": {},
-			"Kota Samarinda": {
+			"Bontang": {},
+			"Samarinda": {
 				"Stay": {
 					"Hotels": {
 						"Ibis Samarinda Hotel": {
+							"image-url": "",
 							"name": "Ibis Samarinda Hotel",
 							"city": "Samarinda",
 							"tags": ["Recommended", "3-Star"],
@@ -112,30 +67,8 @@
 					},
 					"Resorts": {}
 				},
-				"Eat": {
-					"": {
-						"name": "",
-						"city": "",
-						"tags": [],
-						"phone-contact": "",
-						"location": "",
-						"details": {
-							"cuisines": [],
-							"diets": [],
-							"meals": []
-						}
-					}
-				},
-				"Do": {
-					"": {
-						"name": "",
-						"city": "",
-						"tags": [],
-						"phone-contact": "",
-						"location": "",
-						"duration-estimate": ""
-					}
-				}
+				"Eat": {},
+				"Do": {}
 			}
 		}
 	}

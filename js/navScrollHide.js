@@ -29,28 +29,18 @@
 // 	lastScrollTop = scrollTop;
 // });
 
-let lastScrollpos = window.scrollY;
 let navBar = document.getElementById('navBar');
-let navBarShade = document.getElementById('navBarShade');
-window.addEventListener('scroll', function () {
-	/* Hide navBar on scroll */
+
+let lastScrollpos = window.scrollY;
+
+window.addEventListener('scroll', () => {
 	let nowScrollPos = window.scrollY;
-	console.log(nowScrollPos);
+
+	/* Hide navBar on scroll */
 	if (lastScrollpos > nowScrollPos) {
 		navBar.style.top = '0';
 	} else if (nowScrollPos > 95) {
 		navBar.style.top = '-65px';
 	}
 	lastScrollpos = nowScrollPos;
-
-	/* Transparent navBar when scrollY is 0 */
-	if (nowScrollPos === 0) {
-		navBarShade.classList.remove('backdrop-blur');
-		navBarShade.classList.remove('bg-zinc-50/75');
-		navBarShade.classList.remove('dark:bg-gray-900/75');
-	} else {
-		navBarShade.classList.add('backdrop-blur');
-		navBarShade.classList.add('bg-zinc-50/75');
-		navBarShade.classList.add('dark:bg-gray-900/75');
-	}
 });

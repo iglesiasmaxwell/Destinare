@@ -1,8 +1,12 @@
+/* CSS Variable */
+
+/* LIGHT */
 [data-theme='light'] {
 	--p: #d4d4d8;
 	--s: #e7e5e4;
 }
 
+/* DARK */
 [data-theme='dark'] {
 	--p: #475569;
 	--s: #e7e5e4;
@@ -35,4 +39,19 @@
 	background-color: var(--s);
 	border-radius: 14px;
 	border: 3px solid var(--p);
+}
+
+/* Don't show scrollbar */
+
+.scroll-gallery {
+	/* Edge and Internet Explorer 10+ */
+	-ms-overflow-style: none;
+
+	/* Firefox */
+	scrollbar-width: none !important;
+}
+
+.scroll-gallery::-webkit-scrollbar {
+	/* Safari and Chrome */
+	display: none;
 }

@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Location Selected
+ */
 $countrySelect = 'Indonesia';
 $provinceSelect = 'East Kalimantan';
-$regencitySelect = 'Kota Samarinda';
+$regencitySelect = 'Samarinda';

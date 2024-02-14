@@ -4,7 +4,8 @@ tailwind.config = {
 		fontFamily: {
 			Pacifico: 'Pacifico',
 			Outfit: 'Outfit',
-			Cabin: 'Cabin',
+			Poppins: 'Poppins',
+			Playfair: 'Playfair Display',
 			JetbrainsMono: 'Jetbrains Mono',
 		},
 	},
