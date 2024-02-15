@@ -21,7 +21,7 @@
 				"location": "Berau District, East Kalimantan, East Kalimantan Indonesia",
 				"details": {
 					"room-types": [],
-					"hotel-class": null,
+					"hotel-class": 3,
 					"hotel-style": []
 				}
 			},
@@ -30,10 +30,22 @@
 				"city": "Balikpapan",
 				"tags": ["Romantic", "4-Star"],
 				"phone-contact": null,
-				"location": "Jln. Soekarno Hatta No. 28, Balikpapan 76125 Indonesia",
+				"location": "Jalan Soekarno Hatta No. 28, Balikpapan 76125 Indonesia",
 				"details": {
 					"room-types": [],
-					"hotel-class": null,
+					"hotel-class": 4,
+					"hotel-style": []
+				}
+			},
+			"Mercure": {
+				"image-url": "https://www.ahstatic.com/photos/b5e4_ho_00_p_2048x1536.jpg",
+				"city": "Samarinda",
+				"tags": [],
+				"phone-contact": null,
+				"location": "Jalan Mulawarman No 171, Samarinda 75112 Indonesia",
+				"details": {
+					"room-types": [],
+					"hotel-class": 4,
 					"hotel-style": []
 				}
 			}
@@ -44,7 +56,7 @@
 				"city": "Balikpapan",
 				"tags": ["Seafood", "Asian", "Indonesian"],
 				"phone-contact": "+62 542 739439",
-				"location": "Jl. Jenderal Sudirman, Ruko Bandar No. 18 Blok M, Balikpapan 76112 Indonesia",
+				"location": "Jalan Jenderal Sudirman, Ruko Bandar No. 18 Blok M, Balikpapan 76112 Indonesia",
 				"details": {
 					"cuisines": ["Seafood", "Asian", "Indonesian"],
 					"diets": ["Vegetarian Friendly", "Vegan Options", "Halal", "Gluten Free Options"],
@@ -58,8 +70,14 @@
 				"city": "Berau",
 				"tags": ["Bodies of Water", "Lake"],
 				"phone-contact": null,
-				"location": "Desa Labuan Kelambu, Kecamatan Biduk Biduk, Berau 77373 Indonesia",
-				"duration-estimate": "1-2 hours"
+				"location": "Desa Labuan Kelambu, Kecamatan Biduk Biduk, Berau 77373 Indonesia"
+			},
+			"Derawan Archipelago": {
+				"image-url": "https://public.urbanasia.com/images/post/2021/01/11/1610342973-derawan5.jpeg",
+				"city": "Berau",
+				"tags": ["Islands"],
+				"phone-contact": null,
+				"location": "Jalan Pulau Derawan Rt 002, East Kalimantan 77381 Indonesia"
 			}
 		}
 	}

@@ -26,7 +26,25 @@ class scrollGallery {
 		let slideAmountMin = slideAmount / this.galleryCon.offsetWidth;
 		let slideAmountRemain = slideAmount / slideAmountMin;
 
+		this.hoverLeftUnactive = () => {
+			this.slideLeft.classList.remove('hover:bg-zinc-700/10');
+			this.slideLeft.classList.remove('hover:dark:bg-gray-200/10');
+		};
+		this.hoverLeftActive = () => {
+			this.slideLeft.classList.add('hover:bg-zinc-700/10');
+			this.slideLeft.classList.add('hover:dark:bg-gray-200/10');
+		};
+		this.hoverRightUnactive = () => {
+			this.slideRight.classList.remove('hover:bg-zinc-700/10');
+			this.slideRight.classList.remove('hover:dark:bg-gray-200/10');
+		};
+		this.hoverRightActive = () => {
+			this.slideRight.classList.add('hover:bg-zinc-700/10');
+			this.slideRight.classList.add('hover:dark:bg-gray-200/10');
+		};
+
 		this.leftUnactive = () => {
+			this.hoverLeftUnactive();
 			this.slideLeft.classList.add('cursor-not-allowed');
 			this.slideLeft.classList.add('bg-zinc-200/20');
 			this.slideLeft.classList.add('dark:bg-gray-700/10');
@@ -34,6 +52,7 @@ class scrollGallery {
 			this.slideLeftIcon.classList.add('dark:text-zinc-500');
 		};
 		this.leftActive = () => {
+			this.hoverLeftActive();
 			this.slideLeft.classList.remove('cursor-not-allowed');
 			this.slideLeft.classList.remove('bg-zinc-200/20');
 			this.slideLeft.classList.remove('dark:bg-gray-700/10');
@@ -41,6 +60,7 @@ class scrollGallery {
 			this.slideLeftIcon.classList.remove('dark:text-zinc-500');
 		};
 		this.rightUnactive = () => {
+			this.hoverRightUnactive();
 			this.slideRight.classList.add('cursor-not-allowed');
 			this.slideRight.classList.add('bg-zinc-200/20');
 			this.slideRight.classList.add('dark:bg-gray-700/10');
@@ -48,6 +68,7 @@ class scrollGallery {
 			this.slideRightIcon.classList.add('dark:text-zinc-500');
 		};
 		this.rightActive = () => {
+			this.hoverRightActive();
 			this.slideRight.classList.remove('cursor-not-allowed');
 			this.slideRight.classList.remove('bg-zinc-200/20');
 			this.slideRight.classList.remove('dark:bg-gray-700/10');
@@ -71,14 +92,7 @@ class scrollGallery {
 			this.slideRight.classList.add('hidden');
 		} else {
 			this.leftUnactive();
-			if (
-				this.slideRight.classList.contains('bg-zinc-200/20') ||
-				this.slideRight.classList.contains('dark:bg-gray-700/10') ||
-				this.slideRightIcon.classList.remove('text-gray-400/85') ||
-				this.slideRightIcon.classList.remove('dark:text-zinc-500')
-			) {
-				this.rightActive();
-			}
+			this.rightActive();
 		}
 
 		/* Left Button */
