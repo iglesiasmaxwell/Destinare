@@ -294,7 +294,7 @@ include_once '../api/fetchData.php';
 	</footer>
 	<div id="topButton" class="group/button fixed bottom-5 right-5 transition ease-in-out duration-300 cursor-pointer">
 		<div class="grid justify-center items-center backdrop-blur bg-zinc-50/75 dark:bg-gray-900/75 hover:bg-zinc-100/75 hover:dark:bg-gray-800/75 w-12 h-12 rounded-full border border-gray-700/10 dark:border-zinc-400/10 shadow-md shadow-gray-300 dark:shadow-zinc-800">
-			<i class="group-hover/button:translate-y-[-7.5px] ti ti-chevron-compact-up text-gray-800 dark:text-zinc-50 text-xl transition ease-in-out duration-1000"></i>
+			<i class="group-hover/button:translate-y-[-4.5px] ti ti-chevron-compact-up text-gray-800 dark:text-zinc-50 text-xl transition ease-in-out duration-1000"></i>
 		</div>
 	</div>
 </body>
