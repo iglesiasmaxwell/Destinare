@@ -88,10 +88,10 @@ include_once '../api/fetchData.php';
 				<p class="font-semibold font-Poppins text-xl mb-5 select-none">Explore</p>
 				<p class="text-base font-Playfair font-medium w-56">The journeys and voyages for your true destination, begins.</p>
 				<div class="flex float-right absolute top-4 right-4 gap-4 items-center">
-					<button class="grid items-center slide-left w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
+					<button class="grid items-center slide-left w-10 h-10 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
 						<i class="ti ti-chevron-compact-left text-gray-800 dark:text-zinc-50 text-lg"></i>
 					</button>
-					<button class="grid items-center slide-right w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
+					<button class="grid items-center slide-right w-10 h-10 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
 						<i class="ti ti-chevron-compact-right text-gray-800 dark:text-zinc-50 text-lg"></i>
 					</button>
 				</div>
@@ -141,10 +141,10 @@ include_once '../api/fetchData.php';
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
 				</div>
 				<div class="flex float-right absolute bottom-4 right-4 gap-4 items-center">
-					<button class="grid items-center slide-left w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
+					<button class="grid items-center slide-left w-10 h-10 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
 						<i class="ti ti-chevron-compact-left text-gray-800 dark:text-zinc-50 text-lg"></i>
 					</button>
-					<button class="grid items-center slide-right w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
+					<button class="grid items-center slide-right w-10 h-10 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
 						<i class="ti ti-chevron-compact-right text-gray-800 dark:text-zinc-50 text-lg"></i>
 					</button>
 				</div>
@@ -188,10 +188,10 @@ include_once '../api/fetchData.php';
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
 				</div>
 				<div class="flex float-right absolute bottom-4 right-4 gap-4 items-center">
-					<button class="grid items-center slide-left w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
+					<button class="grid items-center slide-left w-10 h-10 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
 						<i class="ti ti-chevron-compact-left text-gray-800 dark:text-zinc-50 text-lg"></i>
 					</button>
-					<button class="grid items-center slide-right w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
+					<button class="grid items-center slide-right w-10 h-10 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
 						<i class="ti ti-chevron-compact-right text-gray-800 dark:text-zinc-50 text-lg"></i>
 					</button>
 				</div>
@@ -235,10 +235,10 @@ include_once '../api/fetchData.php';
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
 				</div>
 				<div class="flex float-right absolute bottom-4 right-4 gap-4 items-center">
-					<button class="grid items-center slide-left w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
+					<button class="grid items-center slide-left w-10 h-10 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
 						<i class="ti ti-chevron-compact-left text-gray-800 dark:text-zinc-50 text-lg"></i>
 					</button>
-					<button class="grid items-center slide-right w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
+					<button class="grid items-center slide-right w-10 h-10 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
 						<i class="ti ti-chevron-compact-right text-gray-800 dark:text-zinc-50 text-lg"></i>
 					</button>
 				</div>
