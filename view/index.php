@@ -275,7 +275,7 @@ include_once '../api/fetchData.php';
 		</div>
 
 	</section>
-	<footer id="More" class="bg-zinc-100/75 dark:bg-gray-800/50 w-full py-6 px-10 relative">
+	<footer id="More" class="bg-zinc-100/75 dark:bg-gray-800/50 w-full py-6 px-20 relative">
 		<div class="flex justify-between items-center">
 			<div class="bg-zinc-50/80 dark:bg-gray-900/50 rounded-lg px-5 py-3 shadow dark:shadow-lg shadow-gray-300 dark:shadow-zinc-800">
 				<p class="font-medium text-gray-800 dark:text-zinc-50 text-lg tracking-wide font-Pacifico select-none">Destinare</p>
@@ -292,11 +292,17 @@ include_once '../api/fetchData.php';
 			</div>
 		</div>
 	</footer>
+	<div id="topButton" class="group/button fixed bottom-5 right-5 transition ease-in-out duration-300 cursor-pointer">
+		<div class="grid justify-center items-center backdrop-blur bg-zinc-50/75 dark:bg-gray-900/75 hover:bg-zinc-100/75 hover:dark:bg-gray-800/75 w-12 h-12 rounded-full border border-gray-700/10 dark:border-zinc-400/10 shadow-md shadow-gray-300 dark:shadow-zinc-800">
+			<i class="group-hover/button:translate-y-[-7.5px] ti ti-chevron-compact-up text-gray-800 dark:text-zinc-50 text-xl transition ease-in-out duration-1000"></i>
+		</div>
+	</div>
 </body>
 <!-- JAVASCRIPT AFTER -->
 <script src="../js/dark-mode/darkModeIcons.js"></script>
 <script src="../js/dark-mode/toggleDark.js"></script>
 <script src="../js/scrollGalleryButton.js"></script>
 <script src="../js/navScrollBlur.js"></script>
+<script src="../js/goTop.js"></script>
 
 </html>
