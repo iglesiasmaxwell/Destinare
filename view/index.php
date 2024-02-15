@@ -85,8 +85,8 @@ include_once '../api/fetchData.php';
 
 		<div class="grid w-full py-6 gap-6">
 			<div id="scrollGallery-all-Con" class="group/more w-full h-fit bg-zinc-100/75 dark:bg-gray-800/50 px-3 py-4 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-semibold font-Poppins text-xl mb-2">Explore</p>
-				<p class="text-base font-Playfair font-medium w-56">The journeys and voyages for your true destination, begin here.</p>
+				<p class="font-semibold font-Poppins text-xl mb-5">Explore</p>
+				<p class="text-base font-Playfair font-medium w-56">The journeys and voyages for your true destination, begins.</p>
 				<div class="flex float-right absolute top-4 right-4 gap-4 items-center">
 					<button class="grid items-center slide-left w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
 						<i class="ti ti-chevron-compact-left text-gray-800 dark:text-zinc-50 text-lg"></i>
@@ -97,7 +97,7 @@ include_once '../api/fetchData.php';
 				</div>
 			</div>
 			<div id="scrollGallery-all" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
-				<div class="flex gap-6">
+				<div class="flex gap-2">
 					<?php
 					foreach ($eastKalimantanAll as $key => $array) {
 					?>
@@ -109,12 +109,12 @@ include_once '../api/fetchData.php';
 									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
-							<div class="mt-1 mx-1 font-Outfit font-medium">
-								<p class="text-lg empty:hidden"><?= $key ?></p>
+							<div class="mt-1 mx-1 font-Outfit font-medium w-72">
+								<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
 								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
 									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
 								<?php else : ?>
-									<p class="text-sm text-gray-600 dark:text-zinc-300"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
+									<p class="text-sm text-gray-600 dark:text-zinc-300 line-clamp-3 break-words whitespace-normal"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
 								<?php endif; ?>
 							</div>
 						</div>
@@ -128,14 +128,14 @@ include_once '../api/fetchData.php';
 
 
 	<section id="Essential" class="mt-12 mx-8">
-		<h1 class="text-3xl font-JetbrainsMono font-medium">
+		<h1 class="text-3xl font-JetbrainsMono font-semibold">
 			<span class="font-Outfit text-gray-600 dark:text-zinc-300 uppercase">Essential</span>
 			<span><?= $eastKalimantanKey[0]; ?></span>
 		</h1>
 
 		<div class="flex w-full py-6 gap-6">
 			<div id="scrollGallery-stay-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-semibold font-Poppins text-xl mb-2">Stay</p>
+				<p class="font-semibold font-Poppins text-xl mb-5">Stay</p>
 				<p class="text-base font-Playfair font-medium">A mix of the charming, modern, and tried and true.</p>
 				<div class="my-3">
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
@@ -150,7 +150,7 @@ include_once '../api/fetchData.php';
 				</div>
 			</div>
 			<div id="scrollGallery-stay" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
-				<div class="flex gap-6">
+				<div class="flex gap-2">
 					<?php
 					$count = 0;
 					$limit = 8;
@@ -164,12 +164,12 @@ include_once '../api/fetchData.php';
 									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
-							<div class="mt-1 mx-1 font-Outfit font-medium">
-								<p class="text-lg empty:hidden"><?= $key ?></p>
+							<div class="mt-1 mx-1 font-Outfit font-medium w-72">
+								<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
 								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
 									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
 								<?php else : ?>
-									<p class="text-sm text-gray-600 dark:text-zinc-300"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
+									<p class="text-sm text-gray-600 dark:text-zinc-300 line-clamp-3 break-words whitespace-normal"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
 								<?php endif; ?>
 							</div>
 						</div>
@@ -182,7 +182,7 @@ include_once '../api/fetchData.php';
 
 		<div class="flex w-full py-6 gap-6">
 			<div id="scrollGallery-eat-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-semibold font-Poppins text-xl mb-2">Eat</p>
+				<p class="font-semibold font-Poppins text-xl mb-5">Eat</p>
 				<p class="text-base font-Playfair font-medium">Can't-miss spots to dine, drink, and feast.</p>
 				<div class="my-3">
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
@@ -197,7 +197,7 @@ include_once '../api/fetchData.php';
 				</div>
 			</div>
 			<div id="scrollGallery-eat" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
-				<div class="flex gap-6">
+				<div class="flex gap-2">
 					<?php
 					$count = 0;
 					$limit = 8;
@@ -211,12 +211,12 @@ include_once '../api/fetchData.php';
 									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
-							<div class="mt-1 mx-1 font-Outfit font-medium">
-								<p class="text-lg empty:hidden"><?= $key ?></p>
+							<div class="mt-1 mx-1 font-Outfit font-medium w-72">
+								<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
 								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
 									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
 								<?php else : ?>
-									<p class="text-sm text-gray-600 dark:text-zinc-300"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
+									<p class="text-sm text-gray-600 dark:text-zinc-300 line-clamp-3 break-words whitespace-normal"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
 								<?php endif; ?>
 							</div>
 						</div>
@@ -229,7 +229,7 @@ include_once '../api/fetchData.php';
 
 		<div class="flex w-full py-6 gap-6">
 			<div id="scrollGallery-do-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-semibold font-Poppins text-xl mb-2">Do</p>
+				<p class="font-semibold font-Poppins text-xl mb-5">Do</p>
 				<p class="text-base font-Playfair font-medium">Places to see, ways to wander, and signature experiences.</p>
 				<div class="my-3">
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
@@ -244,7 +244,7 @@ include_once '../api/fetchData.php';
 				</div>
 			</div>
 			<div id="scrollGallery-do" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
-				<div class="flex gap-6">
+				<div class="flex gap-2">
 					<?php
 					$count = 0;
 					$limit = 8;
@@ -258,12 +258,12 @@ include_once '../api/fetchData.php';
 									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
-							<div class="mt-1 mx-1 font-Outfit font-medium">
-								<p class="text-lg empty:hidden"><?= $key ?></p>
+							<div class="mt-1 mx-1 font-Outfit font-medium w-72">
+								<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
 								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
 									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
 								<?php else : ?>
-									<p class="text-sm text-gray-600 dark:text-zinc-300"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
+									<p class="text-sm text-gray-600 dark:text-zinc-300 line-clamp-3 break-words whitespace-normal"><?= $array['city'] ?> <i class="ti ti-point-filled text-xs"></i> <?= implode(', ', $array['tags']) ?></p>
 								<?php endif; ?>
 							</div>
 						</div>
@@ -275,24 +275,24 @@ include_once '../api/fetchData.php';
 		</div>
 
 	</section>
+	<footer id="More" class="bg-zinc-100/75 dark:bg-gray-800/50 w-full py-6 px-10 relative">
+		<div class="flex justify-between items-center">
+			<div class="bg-zinc-50/80 dark:bg-gray-900/50 rounded-lg px-5 py-3 shadow dark:shadow-lg shadow-gray-300 dark:shadow-zinc-800">
+				<p class="font-medium text-gray-800 dark:text-zinc-50 text-lg tracking-wide font-Pacifico select-none">Destinare</p>
+				<p class="text-xs text-gray-800/80 dark:text-zinc-50/80 select-none">© 2024 Destinare All rights reserved.</p>
+			</div>
+			<p class="text-xs text-gray-800/35 dark:text-zinc-50/35 select-none">This website is only made for education purposes, and not for any monetary gain.</p>
+			<div class="flex gap-6 justify-center items-center bg-zinc-50/80 dark:bg-gray-900/50 rounded-lg px-5 py-3 shadow dark:shadow-lg shadow-gray-300 dark:shadow-zinc-800">
+				<a href="#" class="group/icon text-gray-800/80 dark:text-zinc-50/80">
+					<i class="fa-brands fa-x-twitter fa-fw fa-lg group-hover/icon:text-black dark:group-hover/icon:text-white transition ease-in duration-150"></i>
+				</a>
+				<a href="#" class="group/icon text-gray-800/80 dark:text-zinc-50/80">
+					<i class="fa-brands fa-instagram fa-fw fa-lg group-hover/icon:text-black dark:group-hover/icon:text-white transition ease-in duration-150"></i>
+				</a>
+			</div>
+		</div>
+	</footer>
 </body>
-<footer id="More" class="bg-zinc-100/75 dark:bg-gray-800/50 w-full py-6 px-10 relative">
-	<div class="flex justify-between items-center">
-		<div class="bg-zinc-50/50 dark:bg-gray-900/50 rounded-lg px-5 py-3">
-			<p class="font-medium text-gray-800 dark:text-zinc-50 text-lg tracking-wide font-Pacifico select-none">Destinare</p>
-			<p class="text-xs text-gray-800/80 dark:text-zinc-50/80">© 2024 Destinare All rights reserved.</p>
-		</div>
-		<p class="text-xs text-gray-800/35 dark:text-zinc-50/35">This website is only made for education purpose, not for any monetary gain.</p>
-		<div class="flex gap-6 justify-center items-center bg-zinc-50/50 dark:bg-gray-900/50 rounded-lg px-5 py-3">
-			<a href="#" class="group/icon text-gray-800/80 dark:text-zinc-50/80">
-				<i class="fa-brands fa-x-twitter fa-fw fa-lg group-hover/icon:text-black dark:group-hover/icon:text-white transition ease-in duration-150"></i>
-			</a>
-			<a href="#" class="group/icon text-gray-800/80 dark:text-zinc-50/80">
-				<i class="fa-brands fa-instagram fa-fw fa-lg group-hover/icon:text-black dark:group-hover/icon:text-white transition ease-in duration-150"></i>
-			</a>
-		</div>
-	</div>
-</footer>
 <!-- JAVASCRIPT AFTER -->
 <script src="../js/dark-mode/darkModeIcons.js"></script>
 <script src="../js/dark-mode/toggleDark.js"></script>

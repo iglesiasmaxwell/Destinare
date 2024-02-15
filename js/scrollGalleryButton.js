@@ -5,31 +5,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	new scrollGallery('scrollGallery-do');
 });
 
-function leftActive() {
-	this.slideLeft.classList.remove('bg-zinc-200/20');
-	this.slideLeft.classList.remove('dark:bg-gray-700/10');
-	this.slideLeftIcon.classList.remove('text-gray-400/85');
-	this.slideLeftIcon.classList.remove('dark:text-zinc-500');
-}
-function leftUnactive() {
-	this.slideLeft.classList.add('bg-zinc-200/20');
-	this.slideLeft.classList.add('dark:bg-gray-700/10');
-	this.slideLeftIcon.classList.add('text-gray-400/85');
-	this.slideLeftIcon.classList.add('dark:text-zinc-500');
-}
-function rightUnactive() {
-	this.slideLeft.classList.remove('bg-zinc-200/20');
-	this.slideLeft.classList.remove('dark:bg-gray-700/10');
-	this.slideLeftIcon.classList.remove('text-gray-400/85');
-	this.slideLeftIcon.classList.remove('dark:text-zinc-500');
-}
-function rightActive() {
-	this.slideRight.classList.remove('bg-zinc-200/20');
-	this.slideRight.classList.remove('dark:bg-gray-700/10');
-	this.slideRightIcon.classList.remove('text-gray-400/85');
-	this.slideRightIcon.classList.remove('dark:text-zinc-500');
-}
-
 class scrollGallery {
 	constructor(scrollGalleryID) {
 		/* Container */
@@ -44,28 +19,36 @@ class scrollGallery {
 		this.slideLeftIcon = this.slideLeft.getElementsByClassName('ti-chevron-compact-left')[0];
 		this.slideRightIcon = this.slideRight.getElementsByClassName('ti-chevron-compact-right')[0];
 
-		let slideAmount = 300;
-		let slideAmountRemain = 200;
+		/* Gallery Cards */
+		this.galleryCon = this.scrollGallery.getElementsByClassName('gallery')[0];
+
+		let slideAmount = this.scrollGallery.offsetWidth;
+		let slideAmountMin = slideAmount / this.galleryCon.offsetWidth;
+		let slideAmountRemain = slideAmount / slideAmountMin;
 
 		this.leftUnactive = () => {
+			this.slideLeft.classList.add('cursor-not-allowed');
 			this.slideLeft.classList.add('bg-zinc-200/20');
 			this.slideLeft.classList.add('dark:bg-gray-700/10');
 			this.slideLeftIcon.classList.add('text-gray-400/85');
 			this.slideLeftIcon.classList.add('dark:text-zinc-500');
 		};
 		this.leftActive = () => {
+			this.slideLeft.classList.remove('cursor-not-allowed');
 			this.slideLeft.classList.remove('bg-zinc-200/20');
 			this.slideLeft.classList.remove('dark:bg-gray-700/10');
 			this.slideLeftIcon.classList.remove('text-gray-400/85');
 			this.slideLeftIcon.classList.remove('dark:text-zinc-500');
 		};
 		this.rightUnactive = () => {
+			this.slideRight.classList.add('cursor-not-allowed');
 			this.slideRight.classList.add('bg-zinc-200/20');
 			this.slideRight.classList.add('dark:bg-gray-700/10');
 			this.slideRightIcon.classList.add('text-gray-400/85');
 			this.slideRightIcon.classList.add('dark:text-zinc-500');
 		};
 		this.rightActive = () => {
+			this.slideRight.classList.remove('cursor-not-allowed');
 			this.slideRight.classList.remove('bg-zinc-200/20');
 			this.slideRight.classList.remove('dark:bg-gray-700/10');
 			this.slideRightIcon.classList.remove('text-gray-400/85');
@@ -83,7 +66,7 @@ class scrollGallery {
 		if (this.scrollGallery.scrollWidth <= 1152 && this.scrollGallery.id == 'scrollGallery-all') {
 			this.slideLeft.classList.add('hidden');
 			this.slideRight.classList.add('hidden');
-		} else if (this.scrollGallery.scrollWidth <= 912) {
+		} else if (this.scrollGallery.scrollWidth <= 920) {
 			this.slideLeft.classList.add('hidden');
 			this.slideRight.classList.add('hidden');
 		} else {
@@ -117,11 +100,11 @@ class scrollGallery {
 			if (lastScrollLeft > nowScrollLeft) {
 				this.rightActive();
 				if (this.scrollGallery.id == 'scrollGallery-all') {
-					if (this.scrollGallery.scrollLeft <= slideAmount - slideAmountRemain) {
+					if (this.scrollGallery.scrollLeft <= slideAmountRemain - slideAmountRemain / 2) {
 						this.leftUnactive();
 					}
 				} else {
-					if (this.scrollGallery.scrollLeft <= slideAmount) {
+					if (this.scrollGallery.scrollLeft <= slideAmountRemain) {
 						this.leftUnactive();
 					}
 				}
@@ -132,14 +115,14 @@ class scrollGallery {
 					if (this.scrollGallery.id == 'scrollGallery-all') {
 						if (
 							this.scrollGallery.scrollLeft + this.scrollGallery.offsetWidth >
-							this.scrollGallery.scrollWidth - slideAmount + slideAmountRemain
+							this.scrollGallery.scrollWidth - slideAmountRemain + slideAmountRemain / 2
 						) {
 							this.rightUnactive();
 						}
 					} else {
 						if (
 							this.scrollGallery.scrollLeft + this.scrollGallery.offsetWidth >
-							this.scrollGallery.scrollWidth - slideAmount
+							this.scrollGallery.scrollWidth - slideAmountRemain
 						) {
 							this.rightUnactive();
 						}
