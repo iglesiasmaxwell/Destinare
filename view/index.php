@@ -97,7 +97,7 @@ include_once '../api/fetchData.php';
 				</div>
 			</div>
 			<div id="scrollGallery-all" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
-				<div class="flex gap-2">
+				<div class="flex gap-3">
 					<?php
 					foreach ($eastKalimantanAll as $key => $array) {
 					?>
@@ -150,7 +150,7 @@ include_once '../api/fetchData.php';
 				</div>
 			</div>
 			<div id="scrollGallery-stay" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
-				<div class="flex gap-2">
+				<div class="flex gap-3">
 					<?php
 					$count = 0;
 					$limit = 8;
@@ -197,7 +197,7 @@ include_once '../api/fetchData.php';
 				</div>
 			</div>
 			<div id="scrollGallery-eat" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
-				<div class="flex gap-2">
+				<div class="flex gap-3">
 					<?php
 					$count = 0;
 					$limit = 8;
@@ -244,7 +244,7 @@ include_once '../api/fetchData.php';
 				</div>
 			</div>
 			<div id="scrollGallery-do" class="snap-x snap-always snap-mandatory overflow-x-scroll pb-6 scroll-gallery scroll-smooth whitespace-nowrap">
-				<div class="flex gap-2">
+				<div class="flex gap-3">
 					<?php
 					$count = 0;
 					$limit = 8;
