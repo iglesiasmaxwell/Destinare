@@ -79,13 +79,13 @@ include_once '../api/fetchData.php';
 	</nav>
 	<header id="Discover" class="mt-24 mx-8">
 		<h1 class="text-4xl font-JetbrainsMono font-semibold">
-			<span class="font-Outfit text-gray-600 dark:text-zinc-300 uppercase">Discover</span>
+			<span class="font-Outfit text-gray-600 dark:text-zinc-300 uppercase select-none">Discover</span>
 			<span><?= $eastKalimantanKey[0]; ?></span>
 		</h1>
 
 		<div class="grid w-full py-6 gap-6">
 			<div id="scrollGallery-all-Con" class="group/more w-full h-fit bg-zinc-100/75 dark:bg-gray-800/50 px-3 py-4 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-semibold font-Poppins text-xl mb-5">Explore</p>
+				<p class="font-semibold font-Poppins text-xl mb-5 select-none">Explore</p>
 				<p class="text-base font-Playfair font-medium w-56">The journeys and voyages for your true destination, begins.</p>
 				<div class="flex float-right absolute top-4 right-4 gap-4 items-center">
 					<button class="grid items-center slide-left w-8 h-8 rounded-full bg-zinc-200/50 dark:bg-gray-700/25 transition ease-in-out duration-100">
@@ -129,13 +129,13 @@ include_once '../api/fetchData.php';
 
 	<section id="Essential" class="mt-12 mx-8">
 		<h1 class="text-3xl font-JetbrainsMono font-semibold">
-			<span class="font-Outfit text-gray-600 dark:text-zinc-300 uppercase">Essential</span>
+			<span class="font-Outfit text-gray-600 dark:text-zinc-300 uppercase select-none">Essential</span>
 			<span><?= $eastKalimantanKey[0]; ?></span>
 		</h1>
 
 		<div class="flex w-full py-6 gap-6">
 			<div id="scrollGallery-stay-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-semibold font-Poppins text-xl mb-5">Stay</p>
+				<p class="font-semibold font-Poppins text-xl mb-5 select-none">Stay</p>
 				<p class="text-base font-Playfair font-medium">A mix of the charming, modern, and tried and true.</p>
 				<div class="my-3">
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
@@ -182,7 +182,7 @@ include_once '../api/fetchData.php';
 
 		<div class="flex w-full py-6 gap-6">
 			<div id="scrollGallery-eat-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-semibold font-Poppins text-xl mb-5">Eat</p>
+				<p class="font-semibold font-Poppins text-xl mb-5 select-none">Eat</p>
 				<p class="text-base font-Playfair font-medium">Can't-miss spots to dine, drink, and feast.</p>
 				<div class="my-3">
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
@@ -229,7 +229,7 @@ include_once '../api/fetchData.php';
 
 		<div class="flex w-full py-6 gap-6">
 			<div id="scrollGallery-do-Con" class="group/more w-52 min-w-52 h-52 bg-zinc-100/75 dark:bg-gray-800/50 p-3 rounded-lg relative shadow-md shadow-gray-300 dark:shadow-zinc-800">
-				<p class="font-semibold font-Poppins text-xl mb-5">Do</p>
+				<p class="font-semibold font-Poppins text-xl mb-5 select-none">Do</p>
 				<p class="text-base font-Playfair font-medium">Places to see, ways to wander, and signature experiences.</p>
 				<div class="my-3">
 					<a href="#" class="group-hover/more:opacity-100 opacity-0 group-hover/more:visible invisible font-Poppins text-sm underline underline-offset-2 transition-opacity duration-300 text-gray-600 dark:text-zinc-300 hover:text-black dark:hover:text-white">See all</a>
