@@ -24,7 +24,7 @@
 
 // var_dump($regencityKey);
 
-$json = file_get_contents('../api/EastKalimantan.json');
+$json = file_get_contents('api/EastKalimantan.json');
 $array = json_decode($json, true);
 
 $eastKalimantanKey = array_keys($array);

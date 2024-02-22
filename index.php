@@ -1,5 +1,5 @@
 <?php
-include_once '../api/fetchData.php';
+include_once 'api/fetchData.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth overflow-y-scroll overflow-x-hidden">
@@ -10,7 +10,7 @@ include_once '../api/fetchData.php';
 	<title>Home - Destinare</title>
 	<!-- TAILWIND -->
 	<script src="https://cdn.tailwindcss.com"></script>
-	<script src="../js/config/tailwindConfig.js"></script>
+	<script src="js/config/tailwindConfig.js"></script>
 	<!-- FONTS -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,12 +24,12 @@ include_once '../api/fetchData.php';
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 	<script src="https://kit.fontawesome.com/7a6da8ef9c.js" crossorigin="anonymous"></script>
 	<!-- CSS -->
-	<link rel="stylesheet" href="../css/app.css" />
+	<link rel="stylesheet" href="css/app.css" />
 	<!-- JAVASCRIPT BEFORE -->
-	<script src="../js/dark-mode/darkModePref.js"></script>
+	<script src="js/dark-mode/darkModePref.js"></script>
 </head>
 
-<body class="bg-zinc-50 dark:bg-gray-900 text-gray-800 dark:text-zinc-50 font-Outfit">
+<body class="bg-zinc-50 dark:bg-gray-900 text-gray-800 dark:text-zinc-50 font-Outfit my-0 mx-auto">
 	<nav id="navBar" class="fixed top-0 w-full transition-all duration-1000 z-50">
 		<div id="navBarShade" class="h-16 w-full px-8 flex z-50 transition-all duration-1000">
 			<div class="flex justify-between w-full text-gray-800/80 dark:text-zinc-50/80 items-center">
@@ -77,7 +77,7 @@ include_once '../api/fetchData.php';
 		</div>
 		<hr class="border-gray-800/5 dark:border-zinc-50/5 z-20" />
 	</nav>
-	<header id="Discover" class="mt-24 mx-8">
+	<header id="Discover" class="mt-24 mx-8 max-w-screen-2xl min-[1600px]:mx-auto">
 		<h1 class="text-4xl font-JetbrainsMono font-semibold">
 			<span class="font-Outfit text-gray-600 dark:text-zinc-300 uppercase select-none">Discover</span>
 			<span><?= $eastKalimantanKey[0]; ?></span>
@@ -104,13 +104,17 @@ include_once '../api/fetchData.php';
 						<div class="gallery snap-center flex-shrink-0">
 							<a href="#">
 								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
 								<?php else : ?>
 									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
 							<div class="mt-1 mx-1 font-Outfit font-medium w-72">
-								<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
+								<?php if (empty($key) || $key == '') : ?>
+									<p class="text-lg line-clamp-3 break-words whitespace-normal">Unknown</p>
+								<?php else : ?>
+									<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
+								<?php endif; ?>
 								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
 									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
 								<?php else : ?>
@@ -127,7 +131,7 @@ include_once '../api/fetchData.php';
 	</header>
 
 
-	<section id="Essential" class="mt-12 mx-8">
+	<section id="Essential" class="mt-12 mx-8 max-w-screen-2xl min-[1600px]:mx-auto">
 		<h1 class="text-3xl font-JetbrainsMono font-semibold">
 			<span class="font-Outfit text-gray-600 dark:text-zinc-300 uppercase select-none">Essential</span>
 			<span><?= $eastKalimantanKey[0]; ?></span>
@@ -159,13 +163,17 @@ include_once '../api/fetchData.php';
 						<div class="gallery snap-center flex-shrink-0">
 							<a href="#">
 								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
 								<?php else : ?>
 									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
 							<div class="mt-1 mx-1 font-Outfit font-medium w-72">
-								<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
+								<?php if (empty($key) || $key == '') : ?>
+									<p class="text-lg line-clamp-3 break-words whitespace-normal">Unknown</p>
+								<?php else : ?>
+									<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
+								<?php endif; ?>
 								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
 									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
 								<?php else : ?>
@@ -206,13 +214,17 @@ include_once '../api/fetchData.php';
 						<div class="gallery snap-center flex-shrink-0">
 							<a href="#">
 								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
 								<?php else : ?>
 									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
 							<div class="mt-1 mx-1 font-Outfit font-medium w-72">
-								<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
+								<?php if (empty($key) || $key == '') : ?>
+									<p class="text-lg line-clamp-3 break-words whitespace-normal">Unknown</p>
+								<?php else : ?>
+									<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
+								<?php endif; ?>
 								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
 									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
 								<?php else : ?>
@@ -253,13 +265,17 @@ include_once '../api/fetchData.php';
 						<div class="gallery snap-center flex-shrink-0">
 							<a href="#">
 								<?php if (empty($array['image-url']) || $array['image-url'] == '') : ?>
-									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("../img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
+									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= strval("img/stock-image" . "(" . rand(1, 8) . ")" . ".jpg") ?> />
 								<?php else : ?>
 									<img class="select-none w-72 h-52 rounded-lg shadow-lg shadow-gray-300 dark:shadow-zinc-800 hover:brightness-110" src=<?= $array['image-url'] ?> />
 								<?php endif; ?>
 							</a>
 							<div class="mt-1 mx-1 font-Outfit font-medium w-72">
-								<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
+								<?php if (empty($key) || $key == '') : ?>
+									<p class="text-lg line-clamp-3 break-words whitespace-normal">Unknown</p>
+								<?php else : ?>
+									<p class="text-lg line-clamp-3 empty:hidden break-words whitespace-normal"><?= $key ?></p>
+								<?php endif; ?>
 								<?php if (empty($array['tags']) || $array['tags'] == '') : ?>
 									<p class="text-sm text-gray-600 dark:text-zinc-300 empty:hidden"><?= $array['city'] ?></p>
 								<?php else : ?>
@@ -299,10 +315,10 @@ include_once '../api/fetchData.php';
 	</div>
 </body>
 <!-- JAVASCRIPT AFTER -->
-<script src="../js/dark-mode/darkModeIcons.js"></script>
-<script src="../js/dark-mode/toggleDark.js"></script>
-<script src="../js/scrollGalleryButton.js"></script>
-<script src="../js/navScrollBlur.js"></script>
-<script src="../js/goTop.js"></script>
+<script src="js/dark-mode/darkModeIcons.js"></script>
+<script src="js/dark-mode/toggleDark.js"></script>
+<script src="js/scrollGalleryButton.js"></script>
+<script src="js/navScrollBlur.js"></script>
+<script src="js/goTop.js"></script>
 
 </html>

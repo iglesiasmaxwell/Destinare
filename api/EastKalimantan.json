@@ -85,6 +85,13 @@
 				"tags": ["Beaches"],
 				"phone-contact": null,
 				"location": "Jalan Mulawarman, Balikpapan 76115 Indonesia"
+			},
+			"": {
+				"image-url": "",
+				"city": "",
+				"tags": [],
+				"phone-contact": null,
+				"location": ""
 			}
 		}
 	}
