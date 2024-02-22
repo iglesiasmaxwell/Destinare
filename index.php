@@ -34,7 +34,7 @@ include_once 'api/fetchData.php';
 		<div id="navBarShade" class="h-16 w-full px-8 flex z-50 transition-all duration-1000">
 			<div class="flex justify-between w-full text-gray-800/80 dark:text-zinc-50/80 items-center">
 				<div>
-					<a href="../view/index.php" class="font-medium text-gray-800 dark:text-zinc-50 text-2xl tracking-wide font-Pacifico select-none">Destinare</a>
+					<a href="index.php" class="font-medium text-gray-800 dark:text-zinc-50 text-2xl tracking-wide font-Pacifico select-none">Destinare</a>
 				</div>
 				<div class="flex justify-center space-x-12 font-Outfit select-none">
 					<a href="#Discover" class="font-medium text-medium hover:text-black dark:hover:text-white transition ease-in duration-150">Discover</a>
@@ -318,6 +318,7 @@ include_once 'api/fetchData.php';
 <script src="js/dark-mode/darkModeIcons.js"></script>
 <script src="js/dark-mode/toggleDark.js"></script>
 <script src="js/scrollGalleryButton.js"></script>
+<script src="js/navScrollHide.js"></script>
 <script src="js/navScrollBlur.js"></script>
 <script src="js/goTop.js"></script>
 
